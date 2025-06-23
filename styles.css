@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #00f2fe, #4facfe, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #f093fb 40%, #f5576c 100%);
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #4facfe;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.input-group {
+  margin: 15px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.2s;
+  background: #f7faff;
+}
+
+.input-group input:focus {
+  border: 1.5px solid #4facfe;
+  background: #fff;
+}
+
+.input-group i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4facfe;
+  font-size: 1.1em;
+}
+
+.forgot-password {
+  text-align: right;
+  margin: 10px 0;
+  z-index: 1;
+  position: relative;
+}
+
+.forgot-password a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.2s;
+}
+
+.forgot-password a:hover {
+  color: #f5576c;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(to right, #00f2fe, #4facfe, #f093fb);
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.2s;
+  font-size: 1.1em;
+  margin-top: 10px;
+  box-shadow: 0 4px 16px rgba(79, 172, 254, 0.08);
+  z-index: 1;
+  position: relative;
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #f093fb, #f5576c);
+  box-shadow: 0 6px 24px rgba(240, 147, 251, 0.15);
+}
+
+.or {
+  text-align: center;
+  margin: 15px 0 5px;
+  color: #888;
+  font-size: 0.9em;
+  position: relative;
+  z-index: 1;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.social-login a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  color: #fff;
+  font-size: 1.3em;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 172, 254, 0.08);
+}
+
+.social-login a:hover {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  transform: scale(1.1);
+}
+
+.signup-link {
+  text-align: center;
+  font-size: 0.95em;
+  color: #444;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.signup-link a {
+  font-weight: bold;
+  color: #4facfe;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.signup-link a:hover {
+  color: #f5576c;
+}
+
+/* Extra eye-catching effect: floating bubbles */
+@keyframes floatBubble {
+  0% { transform: translateY(0) scale(1);}
+  50% { transform: translateY(-20px) scale(1.1);}
+  100% { transform: translateY(0) scale(1);}
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  z-index: 0;
+  animation: floatBubble 6s ease-in-out infinite;
+}
+
+.bubble.b1 {
+  width: 60px; height: 60px; left: -30px; top: 60px;
+  background: #00f2fe;
+  animation-delay: 0s;
+}
+.bubble.b2 {
+  width: 40px; height: 40px; right: -20px; top: 120px;
+  background: #f093fb;
+  animation-delay: 2s;
+}
+.bubble.b3 {
+  width: 30px; height: 30px; left: 50%; bottom: -15px;
+  background: #f5576c;
+  animation-delay: 4s;
+}
